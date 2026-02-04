@@ -1,42 +1,45 @@
-# 🌲 Forest Health Analysis: Predição de Altura de Árvores
+# 🌲 Forest Health Analysis: Tree Height Prediction
 
-Este projeto realiza uma análise exploratória e aplica modelos de **Regressão Linear** para prever a altura de árvores (`Tree_Height`) com base em variáveis ambientais, geográficas e composição do solo.
+This project performs an exploratory analysis and applies **Linear Regression** models to predict tree height (`Tree_Height`) based on environmental, geographic, and soil composition variables.
 
-## 📊 Visão Geral do Projeto
-O objetivo principal é entender como fatores como altitude, inclinação do terreno e nutrientes do solo (Nitrogênio e Fósforo) influenciam o crescimento vertical das árvores em diferentes parcelas de amostragem.
+## 📊 Project Overview
+The main objective is to understand how factors such as altitude, terrain slope, and soil nutrients (Nitrogen and Phosphorus) influence the vertical growth of trees in different sampling plots.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 * **Python 3.13**
-* **Pandas & NumPy:** Manipulação e limpeza de dados.
-* **Matplotlib & Seaborn:** Visualização estatística e matrizes de correlação.
-* **Scikit-Learn:** Divisão de dados (train_test_split) e implementação do modelo de Regressão Linear.
+* **Pandas & NumPy:** Data manipulation and cleaning.
 
-## 📂 Estrutura do Dataset
-O dataset `forest_health_data.csv` contém 1000 registros com as seguintes variáveis principais:
-* **DBH (Diameter at Breast Height):** Diâmetro da árvore na altura do peito.
-* **Slope & Elevation:** Inclinação e altitude do terreno.
-* **Soil Nutrients:** Teores de Nitrogênio (TN/AN) e Fósforo (TP/AP) no solo.
-* **Target (Tree_Height):** Altura total da árvore em metros.
+* **Matplotlib & Seaborn:** Statistical visualization and correlation matrices.
 
-## 📈 Resultados da Modelagem
+* **Scikit-Learn:** Data splitting (train_test_split) and implementation of the Linear Regression model.
 
-### Matriz de Correlação
-A análise inicial via Heatmap permite identificar a força da relação entre as variáveis independentes e o alvo.
+## 📂 Dataset Structure
+The dataset `forest_health_data.csv` contains 1000 records with the following main variables:
+* **DBH (Diameter at Breast Height):** Tree diameter at breast height.
 
+* **Slope & Elevation:** Slope and altitude of the terrain.
 
+* **Soil Nutrients:** Nitrogen (TN/AN) and Phosphorus (TP/AP) content in the soil.
 
-### Desempenho do Modelo
-Atualmente, o modelo de Regressão Linear simples apresentou os seguintes indicadores:
-* **R² (Coeficiente de Determinação):** -0.01 (Indica que o modelo atual não explica a variabilidade dos dados melhor que a média).
-* **MSE (Erro Quadrático Médio):** 63.47.
+* **Target (Tree_Height):** Total tree height in meters.
 
+## 📈 Modeling Results
 
+### Correlation Matrix
+The initial analysis via Heatmap allows identifying the strength of the relationship between the independent variables and the target.
 
-### Importância das Variáveis
-Através dos coeficientes do modelo, identificamos quais fatores têm maior peso (positivo ou negativo) na estimativa da altura, como o **DBH** e a **Elevação**.
+### Model Performance
+Currently, the simple linear regression model presented the following indicators:
+* **R² (Coefficient of Determination):** -0.01 (Indicates that the current model does not explain the variability of the data better than the mean).
 
-## 🚀 Como Executar
+* **MSE (Mean Squared Error):** 63.47.
 
-1. Instale as dependências:
-   ```bash
-   pip install pandas matplotlib seaborn scikit-learn
+### Importance of Variables
+Through the model coefficients, we identified which factors have the greatest weight (positive or negative) in the height estimate, such as **DBH** and **Elevation**.
+
+## 🚀 How to Run
+
+1. Install the dependencies:
+
+``bash
+pip install pandas matplotlib seaborn scikit-learn
